@@ -6,6 +6,24 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --blue-100:#edf8fe;
+  --blue-200:#d8f2ff;
+  --blue-400:#40c2fc;
+  --cyan-200:#98f0d7;
+  --cyan-300:#58c896;
+  --golden-300:#fdb338;
+  --gray:#a5a1a1;
+  --mud-100:#fef7f1;
+  --mud-200:#fefbec;
+  --mud-300:#ffefd5;
+  --mud-400:#e9c47e;
+  --mud-600:#d58e4c;
+  --purple-50:#f3f1ff;
+  --purple-100:#eeebfe;
+  --purple-200:#e2dbfd;
+  --purple-300:#b3a0fa;
+  --purple-400:#6341ef;
+  --full-page-height: calc(100svh - 91px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +35,9 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--foreground-rgb))
 }
+footer {
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
+ }
+ 
