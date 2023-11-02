@@ -10,7 +10,7 @@ import redGhost from "../../public/red-ghost.png";
 
 const Hero = () => {
   return (
-    <div className="sm:px-4 py-8 flex w-full h-[var(--full-page-height)]">
+    <div className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
       <div className="relative flex items-center p-5 sm:p-10 flex-auto bg-[var(--purple-100)] rounded-3xl overflow-hidden">
         <Image
           className="absolute -top-10 left-16 rotate-90 "

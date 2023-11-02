@@ -16,21 +16,21 @@ const Header = () => {
       <div className="flex items-center justify-around">
         <div className="flex-auto">
           <Image
-            className="mr-5"
+            className="mr-5 w-10 sm:w-auto"
             src={companyLogo}
             height={'1rem'}
             width={'1rem'}
             alt='logo'
           />
         </div>
-        <div className="min-[786px]:hidden">
+        <div className="tab:hidden">
           {menuOpen ?
             <CloseRounded className="text-4xl" onClick={handleMenu} />
             : <MenuRounded className="text-4xl" onClick={handleMenu} />
           }
         </div>
-        <div className={`${menuOpen ? 'flex' : 'hidden'} top-[91px] gap-5 px-7 pb-7 max-[786px]:w-full min-[786px]:p-0 shadow-md min-[786px]:shadow-none bg-white absolute flex-col min-[786px]:flex-row min-[786px]:static min-[786px]:flex min-[786px]:flex-auto min-[786px]:justify-between min-[786px]:items-center`}>
-          <nav className="flex gap-3 min-[786px]:gap-6 flex-col text-center min-[786px]:items-center min-[786px]:flex-row text-slate-600">
+        <div className={`${menuOpen ? 'flex' : 'hidden'} top-[63px] sm:top-[91px] gap-5 px-7 pb-7 max-[786px]:w-full tab:p-0 shadow-md tab:shadow-none bg-white absolute flex-col tab:flex-row tab:static tab:flex tab:flex-auto tab:justify-between tab:items-center`}>
+          <nav className="flex gap-3 tab:gap-6 flex-col text-center tab:items-center tab:flex-row text-slate-600">
             <a className="text-md rounded-3xl font-medium hover:text-slate-900 max-[786px]:hover:shadow-md max-[786px]:p-2" href="#">Emotions</a>
             <a className="text-md rounded-3xl font-medium hover:text-slate-900 max-[786px]:hover:shadow-md max-[786px]:p-2" href="#">Manifesto</a>
             <a className="text-md rounded-3xl font-medium hover:text-slate-900 max-[786px]:hover:shadow-md max-[786px]:p-2" href="#">Self-awareness test</a>

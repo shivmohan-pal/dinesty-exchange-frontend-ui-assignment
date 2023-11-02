@@ -6,24 +6,27 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --blue-100:#edf8fe;
-  --blue-200:#d8f2ff;
-  --blue-400:#40c2fc;
-  --cyan-200:#98f0d7;
-  --cyan-300:#58c896;
-  --golden-300:#fdb338;
-  --gray:#a5a1a1;
-  --mud-100:#fef7f1;
-  --mud-200:#fefbec;
-  --mud-300:#ffefd5;
-  --mud-400:#e9c47e;
-  --mud-600:#d58e4c;
-  --purple-50:#f3f1ff;
-  --purple-100:#eeebfe;
-  --purple-200:#e2dbfd;
-  --purple-300:#b3a0fa;
-  --purple-400:#6341ef;
+  --blue-100: #edf8fe;
+  --blue-200: #d8f2ff;
+  --blue-400: #40c2fc;
+  --cyan-100: #bdeee1;
+  --cyan-200: #98f0d7;
+  --cyan-300: #58c896;
+  --golden-300: #fdb338;
+  --gray: #a5a1a1;
+  --mud-50: #fef7f1;
+  --mud-100: #fefbec;
+  --mud-200:#fae8dc;
+  --mud-300: #ffefd5;
+  --mud-400: #e9c47e;
+  --mud-600: #d58e4c;
+  --purple-50: #f3f1ff;
+  --purple-100: #eeebfe;
+  --purple-200: #e2dbfd;
+  --purple-300: #b3a0fa;
+  --purple-400: #6341ef;
   --full-page-height: calc(100svh - 91px);
+  --full-page-height-sm: calc(100svh - 63px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,7 +40,29 @@
 body {
   background: rgb(var(--foreground-rgb))
 }
+
 footer {
-  box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
- }
- 
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.meet-app::before {
+  position: absolute;
+  right: 20%;
+  top: 0;
+  content:url('../../public/flower.png');
+  z-index: 1;
+  @apply animate-spin-reverse-slow;
+}

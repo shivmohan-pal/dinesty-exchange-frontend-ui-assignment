@@ -17,8 +17,8 @@ const InfoStrip = ({ icon, info }) => {
 
 const Footer = () => {
     return (
-        <footer className="px-5 py-8 bg-white">
-            <div className="flex flex-col items-center gap-7">
+        <footer className="p-2 sm:px-5 py-6 xs:py-8 bg-white">
+            <div className="flex flex-col items-center gap-4 xs:gap-7">
                 <div className="flex flex-col items-center">
                     <Image
                         src={companyLogo}
