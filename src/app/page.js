@@ -1,7 +1,9 @@
 "use client";
+import BeTheBest from "@/components/BeTheBest";
 import Hero from "@/components/Hero";
 import MeetApp from "@/components/MeetApp";
 import OpenVacancies from "@/components/OpenVacancies";
+import SelfImprovement from "@/components/SelfImprovement";
 import SoundFamiliar from "@/components/SoundFamiliar";
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
      <Hero />
      <SoundFamiliar />
      <MeetApp />
+     <SelfImprovement />
+     <BeTheBest />
      <OpenVacancies />
     </main>
   )
