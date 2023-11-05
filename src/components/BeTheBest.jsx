@@ -1,6 +1,6 @@
 const BeTheBest = () => {
   return (
-    <div className="sm:px-4 py-4 sm:p-7 my-14 flex flex-col justify-around w-full h-96">
+    <div className="sm:px-4 xs:py-3 sm:py-7 flex flex-col justify-around w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
       <div className="flex flex-col gap-2 xs:gap-3 sm:gap-5 p-3 xs:p-4 md:px-10 md:py-5 md:flex-row">
         <h2 className="font-medium text-slate-900 text-xl  xs:text-2xl sm:text-3xl md:text-4xl md:w-1/3">
           Be the Best you with EQ

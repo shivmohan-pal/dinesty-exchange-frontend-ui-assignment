@@ -8,15 +8,18 @@ const MeetApp = () => {
   return (
     <div className="meet-app relative sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] ">
       <div className="relative flex items-center justify-center p-5 sm:p-10 flex-auto bg-[var(--mud-50)] rounded-3xl overflow-hidden">
-        
         <Image
           className="absolute rotate-6 left-[65%] top-20 animate-spin-reverse-slow"
           src={leafSvg}
           alt="leaf"
         />
 
-        <Circle className={"absolute bg-[var(--mud-200)] left-0 -translate-x-1/3 bottom-4 w-[18rem] h-[18rem]"} />
-        
+        <Circle
+          className={
+            "absolute bg-[var(--mud-200)] left-0 -translate-x-1/3 bottom-4 w-[18rem] h-[18rem]"
+          }
+        />
+
         <div className="relative flex flex-col gap-5 xs:gap-10 w-auto backdrop-blur-sm">
           <div>
             <span className="block text-sm font-light opacity-90 mb-3 px-1 sm:text-xl sm:font-normal">

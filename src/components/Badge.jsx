@@ -5,11 +5,11 @@ import Circle from "./Circle";
 
 const Badge = ({count,className,size}) => {
 
-    // const w = size ? `w-[${size}]` : 'w-12';
-    // const h = size ? `h-[${size}]` : 'h-12'
+    // const w = size ? "w-[`${size}`]" : 'w-12';
+    // const h = size ? "h-[`${size}`]"" : 'h-12'
 
     return (
-      <div className={"relative w-14 h-14 z-[1]"}>
+      <div className={`relative inline-block w-14 h-14 z-[1] ${className?className:''}`}>
         <Image 
           className="absolute inset-0 "
          src={starSvg}

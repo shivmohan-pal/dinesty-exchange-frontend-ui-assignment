@@ -1,10 +1,13 @@
 "use client";
 import BeTheBest from "@/components/BeTheBest";
+import BeforeStarted from "@/components/BeforeStarted";
+import EverWonder from "@/components/EverWonder";
 import Hero from "@/components/Hero";
 import MeetApp from "@/components/MeetApp";
 import OpenVacancies from "@/components/OpenVacancies";
 import SelfImprovement from "@/components/SelfImprovement";
 import SoundFamiliar from "@/components/SoundFamiliar";
+import WorkWithUs from "@/components/WorkWithUs";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
      <MeetApp />
      <SelfImprovement />
      <BeTheBest />
+     <EverWonder />
+     <BeforeStarted />
+     <WorkWithUs />
      <OpenVacancies />
     </main>
   )

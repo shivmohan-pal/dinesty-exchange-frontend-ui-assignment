@@ -27,6 +27,7 @@
   --purple-400: #6341ef;
   --full-page-height: calc(100svh - 91px);
   --full-page-height-sm: calc(100svh - 63px);
+  --with-height : calc(var(--full-page-height) - 10rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,4 +66,60 @@ footer {
   content:url('../../public/flower.png');
   z-index: 1;
   @apply animate-spin-reverse-slow;
+}
+
+.dashed-line {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--mud-400) 0px 20px,
+    transparent 20px 40px
+  ); 
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  @apply max-lg:h-2;
+}
+.workWithScroll::-webkit-scrollbar {
+
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 5px;
+}
+.workWithScroll::-webkit-scrollbar-track {
+ @apply bg-white;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+.workWithScroll::-webkit-scrollbar-thumb {
+   @apply bg-[var(--purple-300)];
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.workWithScroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-[var(--purple-400)];
+}
+
+
+/* #signature {
+  stroke-dasharray: 667;
+  stroke-dashoffset: 667;
+} */
+.animate-sign {
+  animation: sign 3s linear forwards;
+}
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

@@ -1,8 +1,8 @@
 
-const Circle = ({children,className}) =>{
+const Circle = ({children,className ,style}) =>{
 
     return (
-        <div className={"rounded-full "+className}>
+        <div className={"rounded-full "+className} style={style}>
             {children}
         </div>
     );

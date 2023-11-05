@@ -27,7 +27,7 @@ export const SoundFamiliar = () => {
           </h3>
           <Image className="w-12 sm:w-auto" src={redGhost} alt="red ghost" />
         </div>
-        <div className="flex gap-2 sm:gap-4 md:gap-6 items-center overflow-x-auto no-scrollbar">
+        <div className="flex py-4 gap-2 sm:gap-4 md:gap-6 items-center overflow-x-auto no-scrollbar">
           {cardData.map((data, i) => {
             const { bgColor, emoji, text, title } = data;
             return (
