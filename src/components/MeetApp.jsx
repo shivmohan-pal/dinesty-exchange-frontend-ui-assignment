@@ -3,13 +3,16 @@ import leafSvg from "../../public/leaf.svg";
 import Circle from "./Circle";
 import Badge from "./Badge";
 import ghost from "../../public/ghost.png";
+import useObserver from "@/helpers/hooks/useObserver";
 
 const MeetApp = () => {
+  const {ref:myRef, inView} = useObserver({threshold:0.25}); 
+
   return (
-    <div className="meet-app relative sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] ">
+    <div ref={myRef} id="meet-app" className="meet-app relative sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] snap-end">
       <div className="relative flex items-center justify-center p-5 sm:p-10 flex-auto bg-[var(--mud-50)] rounded-3xl overflow-hidden">
         <Image
-          className="absolute rotate-6 left-[65%] top-20 animate-spin-reverse-slow"
+          className="absolute rotate-6 left-[65%] top-20 animate-spin-reverse"
           src={leafSvg}
           alt="leaf"
         />
@@ -21,7 +24,7 @@ const MeetApp = () => {
         />
 
         <div className="relative flex flex-col gap-5 xs:gap-10 w-auto backdrop-blur-sm">
-          <div>
+          <div className={`${inView? 'animate-slideLTR' :''} -translate-x-full scale-0 opacity-0`}>
             <span className="block text-sm font-light opacity-90 mb-3 px-1 sm:text-xl sm:font-normal">
               Built out of frustration
             </span>
@@ -34,7 +37,7 @@ const MeetApp = () => {
               <div className="absolute right-0 top-12 rotate-[30deg]">
                 <Circle className={"w-7 h-7 bg-red-200 mb-3 ml-4"} />
                 <Image
-                  className="rotate-[110deg] animate-spin-reverse-slow -ml-6 mt-3"
+                  className="rotate-[110deg] animate-spin-reverse -ml-6 mt-3"
                   src={leafSvg}
                   alt="leaf"
                 />
@@ -47,7 +50,7 @@ const MeetApp = () => {
                 </Circle>
               </div>
               <div className="relative flex flex-col justify-center items-center">
-                <Badge count={1} />
+                <Badge className={`animate-bounce`} count={1} />
                 <Circle
                   className={
                     "flex justify-center items-center -mt-6 -ml-2 z-0 bg-white w-[12rem] h-[12rem] border-[12px] border-slate-100"
@@ -57,7 +60,7 @@ const MeetApp = () => {
                 </Circle>
               </div>
             </div>
-            <div className="flex flex-col gap-2 sm:gap-6 w-auto backdrop-blur-sm sm:w-7/12 z-[2]">
+            <div className={`flex flex-col gap-2 sm:gap-6 w-auto backdrop-blur-sm sm:w-7/12 z-[2] ${inView? 'animate-slideRTL' :''} translate-x-full scale-0 opacity-0`}>
               <p className=" leading-7 opacity-60 max-xs:text-base text-lg sm:text-xl">
                 A personalized pocket coach that provides bite-sized
                 science-driven tools to boost emotional intelligence.

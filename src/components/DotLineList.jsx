@@ -1,7 +1,8 @@
 import Circle from "./Circle";
 
-const DotLineList = ({ children }) => {
+const DotLineList = ({ children ,inView }) => {
   const childs = !Array.isArray(children) ? [children] : [...children];
+
   return (
     <div className="flex relative flex-col">
       {childs.length &&

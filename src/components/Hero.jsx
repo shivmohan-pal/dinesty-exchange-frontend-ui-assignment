@@ -7,19 +7,21 @@ import mobileSvg from "../../public/mobile.svg";
 import blueGhost from "../../public/blue-ghost.png";
 import ghost from "../../public/ghost.png";
 import redGhost from "../../public/red-ghost.png";
+import useObserver from "@/helpers/hooks/useObserver";
 
 const Hero = () => {
+  const {ref:myRef, inView} = useObserver({threshold:0.25}); 
   return (
-    <div className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
+    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
       <div className="relative flex items-center p-5 sm:p-10 flex-auto bg-[var(--purple-100)] rounded-3xl overflow-hidden">
         <Image
-          className="absolute -top-10 left-16 rotate-90 "
+          className={`absolute -top-10 left-16 rotate-90 ${inView?'animate-spin-medium-once':''} duration-700 ease-linear`}
           src={leafSvg}
           alt="leaf"
         />
-        <Circle className={"absolute -top-4 left-3/4 w-12 h-12 bg-red-200 "} />
+        <Circle className={`absolute top-0 -translate-y-4 left-3/4 w-12 h-12 bg-red-200 ${inView?'animate-bounce-once':''}`} />
         <div className="absolute left-1/3 top-12 rotate-45">
-          <Circle className={"w-7 h-7 bg-red-200 mb-3 ml-4"} />
+          <Circle className={`w-7 h-7 bg-red-200 mb-3 ml-4 ${inView?'animate-bounce-once':''}`} />
           <Image
             className="rotate-[110deg] -ml-7 mt-4"
             src={leafSvg}
@@ -27,17 +29,17 @@ const Hero = () => {
           />
           <Circle
             className={
-              "relative mt-4 w-12 h-12 bg-orange-200 backdrop-opacity-10"
+              `relative mt-4 w-12 h-12 bg-orange-200 backdrop-opacity-10`
             }
           >
-            <Circle className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-red-400" />
+            <Circle className={`absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-red-400`} />
           </Circle>
         </div>
         <Circle
-          className={"absolute -left-5 bottom-1/3 w-12 h-12 bg-red-200 "}
+          className={`absolute -left-5 bottom-1/3 w-12 h-12 bg-red-200 ${inView?'animate-bounce-once':''}`}
         />
         <Circle
-          className={"absolute -bottom-[20px] left-1/3 w-12 h-12 bg-red-400"}
+          className={`absolute -bottom-[20px] left-1/3 w-12 h-12 bg-red-400 ${inView?'animate-bounce-once':''}`}
         />
 
         <div className="absolute h-[35rem] w-[35rem] left-1/2 -translate-x-1/3 sm:right-9 sm:left-auto sm:translate-x-0">
@@ -48,7 +50,7 @@ const Hero = () => {
           </Circle>
           <Circle
             className={
-              "relative rotate-[360deg] transition-transform duration-[2s] ease-in-out w-full h-full border-4 border-dashed border-white"
+              `relative ${inView?'-rotate-[360deg]':''} transition-transform duration-[2s] ease-in-out w-full h-full border-4 border-dashed border-white`
             }
           >
             <Image
@@ -69,11 +71,11 @@ const Hero = () => {
           </Circle>
         </div>
 
-        <div className="relative w-auto backdrop-blur-sm sm:w-7/12">
-          <span className="block text-lg font-light mb-3 px-1 sm:text-xl sm:font-normal">
+        <div className={`relative w-auto backdrop-blur-sm sm:w-7/12`}>
+          <span className={`block text-lg font-light mb-3 px-1 sm:text-xl sm:font-normal ${inView? 'animate-slideLTR' :''} -translate-x-full scale-0 opacity-0`}>
             Ahead app
           </span>
-          <h1 className="text-4xl font-bold mb sm:text-6xl">
+          <h1 className={`text-4xl font-bold mb sm:text-6xl ${inView? 'animate-slideLTR' :''} -translate-x-full scale-0 opacity-0`}>
             Master your life by mastering emotions
           </h1>
           <div className="flex flex-col sm:flex-row gap-6 sm:items-center mt-8">

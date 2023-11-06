@@ -1,14 +1,16 @@
 import Image from "next/image";
 import ghost from "../../public/ghost.png";
 import withUsData from "@/helpers/data/withUsData";
+import useObserver from "@/helpers/hooks/useObserver";
 
 const WorkWithUs = () => {
+  const {ref:myRef, inView} = useObserver({threshold:0.25}); 
   return (
-    <div className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] max-lg:h-auto">
+    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] max-lg:h-auto">
       <div className="flex items-start p-5 sm:p-10 flex-auto bg-[var(--purple-50)] rounded-3xl overflow-hidden">
         <div className="flex max-lg:flex-col flex-auto justify-center gap-4 lg:gap-8 overflow-hidden">
           <div className="flex flex-col gap-4 lg:gap-8">
-            <h2 className="font-semibold text-xl xs:text-2xl sm:text-3xl md:text-5xl">
+            <h2 className={`font-semibold text-xl xs:text-2xl sm:text-3xl md:text-5xl ${inView? 'animate-slideLTR' :''} -translate-x-full scale-0 opacity-0`}>
               Work with us
             </h2>
             <div className="relative">
@@ -35,7 +37,7 @@ const WorkWithUs = () => {
           </div>
 
           <div className="flex flex-col gap-4 lg:gap-8 lg:pl-12">
-            <h2 className="font-semibold text-[var(--purple-400)] text-right text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:pr-12">
+            <h2 className={`font-semibold text-[var(--purple-400)] text-right text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:pr-12 ${inView? 'animate-slideRTL' :''} translate-x-full scale-0 opacity-0`}>
               ahead
             </h2>
             <div className="workWithScroll flex lg:flex-col gap-4 sm:gap-6 lg:h-[var(--with-height)] lg:pr-12 max-lg:pb-5 overflow-auto">

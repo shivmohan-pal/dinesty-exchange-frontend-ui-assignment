@@ -19,8 +19,11 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 2.6s linear infinite',
+        'spin-medium-once':'spin 0.6s linear 2',
         "widgle-slow": 'wiggle 1s ease-in-out infinite',
-        'spin-reverse-slow': 'spinReverse 2.6s linear infinite'
+        'spin-reverse': 'spinReverse 1s linear infinite',
+        'spin-reverse-slow': 'spinReverse 2.6s linear infinite',
+        'bounce-once' : 'bounce 1s linear 2'
       },
       keyframes: {
         'spinReverse': {

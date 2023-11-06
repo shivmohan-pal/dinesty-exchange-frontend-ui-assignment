@@ -23,7 +23,14 @@ const withUsData = [
     title: "Play and grow together with others on the same journey",
     text: "Ahead feels like a game, not like a chore. See yourself grow every day towards achieving your goals!",
   },
-
+  {
+    title: "Play and grow together with others on the same journey",
+    text: "Ahead feels like a game, not like a chore. See yourself grow every day towards achieving your goals!",
+  },
+  {
+    title: "Power through, even when the going gets tough",
+    text: "We help you spot and work around whatever stands in the way, be it bad habits, fears, etc.",
+  },
 ];
 
 export default withUsData;

@@ -110,16 +110,88 @@ footer {
   @apply bg-[var(--purple-400)];
 }
 
-
-/* #signature {
-  stroke-dasharray: 667;
-  stroke-dashoffset: 667;
-} */
 .animate-sign {
   animation: sign 3s linear forwards;
 }
 @keyframes sign {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+.animate-slideLTR {
+  animation: leftToRight 1.5s linear forwards;
+
+}
+.animate-slideRTL {
+  animation: rightToLeft 1.5s linear forwards;
+}
+.animate-jumpyScale {
+  animation: jumpyScale 1s linear forwards;
+}
+
+@keyframes leftToRight {
+  25% { 
+     opacity: 0.3;
+     transform: translateX(-50%) scale(0.25);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-25%) scale(0.5);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(-10%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+}
+@keyframes rightToLeft {
+  25% { 
+     opacity: 0.3;
+     transform: translateX(50%) scale(0.25);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(25%) scale(0.5);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(10%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+}
+
+@keyframes jumpyScale {
+  0% {
+     opacity:0.3;
+     transform: scale(0.3);
+  }
+  50% {
+    opacity:1;
+    transform: scale(1);
+  }
+
+  80% {
+    /* opacity:0.6; */
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity:1;
+    transform: scale(1);
   }
 }
