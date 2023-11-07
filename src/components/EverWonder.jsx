@@ -8,7 +8,7 @@ const EverWonder = () => {
   const {ref:myRef, inView} = useObserver({threshold:0.35});
 
   return (
-    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] snap-end">
+    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] ">
       <div className="flex flex-auto items-center justify-center p-5 sm:p-10 bg-[var(--blue-100)] rounded-3xl overflow-hidden">
         <div className="flex flex-col max-sm:gap-5 gap-10">
           <div className="">
