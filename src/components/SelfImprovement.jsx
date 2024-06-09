@@ -10,7 +10,7 @@ const SelfImprovement = () => {
     <div
       ref={myRef}
       id="self-test"
-      className="sm:px-4 xs:py-3 sm:py-7 flex flex-col justify-around w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]"
+      className="sm:px-4 xs:py-3 sm:py-7 flex flex-col justify-around w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] snap-end"
     >
       <div className="flex flex-col gap-3 sm:gap-6 p-3 xs:p-4 md:px-10 md:py-5">
         <div>

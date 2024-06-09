@@ -6,7 +6,7 @@ const BeforeStarted = () => {
   return (
     <div
     ref={myRef} 
-    className="sm:px-4 xs:py-3 sm:py-7 flex flex-col justify-around w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
+    className="sm:px-4 xs:py-3 sm:py-7 flex flex-col justify-around w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] snap-end">
       <div className="flex flex-col m-auto text-center gap-3 lg:w-3/4 xl:w-1/2 sm:gap-6 p-3 xs:p-4 md:px-10 md:py-5">
         <div>
           <span className="block text-sm font-light opacity-90 mb-3 px-1 sm:text-xl sm:font-normal">

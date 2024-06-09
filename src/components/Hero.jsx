@@ -12,7 +12,7 @@ import useObserver from "@/helpers/hooks/useObserver";
 const Hero = () => {
   const {ref:myRef, inView} = useObserver({threshold:0.25}); 
   return (
-    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
+    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] snap-end">
       <div className="relative flex items-center p-5 sm:p-10 flex-auto bg-[var(--purple-100)] rounded-3xl overflow-hidden">
         <Image
           className={`absolute -top-10 left-16 rotate-90 ${inView?'animate-spin-medium-once':''} duration-700 ease-linear`}

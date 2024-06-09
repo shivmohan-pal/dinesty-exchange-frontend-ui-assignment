@@ -6,7 +6,7 @@ import useObserver from "@/helpers/hooks/useObserver";
 const WorkWithUs = () => {
   const {ref:myRef, inView} = useObserver({threshold:0.25}); 
   return (
-    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] max-lg:h-auto">
+    <div ref={myRef} className="sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] max-lg:h-auto snap-end">
       <div className="flex items-start p-5 sm:p-10 flex-auto bg-[var(--purple-50)] rounded-3xl overflow-hidden">
         <div className="flex max-lg:flex-col flex-auto justify-center gap-4 lg:gap-8 overflow-hidden">
           <div className="flex flex-col gap-4 lg:gap-8">

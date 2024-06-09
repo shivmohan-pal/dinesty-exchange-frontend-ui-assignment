@@ -9,7 +9,7 @@ const MeetApp = () => {
   const {ref:myRef, inView} = useObserver({threshold:0.25}); 
 
   return (
-    <div ref={myRef} id="meet-app" className="meet-app relative sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)]">
+    <div ref={myRef} id="meet-app" className="meet-app relative sm:px-4 py-7 flex w-full h-[var(--full-page-height-sm)] sm:h-[var(--full-page-height)] snap-end">
       <div className="relative flex items-center justify-center p-5 sm:p-10 flex-auto bg-[var(--mud-50)] rounded-3xl overflow-hidden">
         <Image
           className="absolute rotate-6 left-[65%] top-20 animate-spin-reverse"
